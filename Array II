@@ -1,0 +1,240 @@
+/*#include <iostream>
+#include<vector>
+using namespace std;
+
+int uniquelement(vector <int> arr ) {
+   int ans= 0;
+  for (int i=0; i<arr.size(); i++){
+    ans = ans ^ arr[i];
+  }
+  return ans;
+}
+int main() {
+//  int n;
+  //cin>>n;
+  vector <int> arr;
+  // cout<<arr.size()<<endl;
+ // cout<<arr.capacity()<<endl;
+  arr.push_back(5);
+  arr.push_back(8);
+  arr.push_back(10);
+ // cout<<arr.size()<<endl;
+  arr.pop_back();
+ // cout<<arr.size()<<endl;
+ // int ans = (sizeof(arr))/(sizeof(int));
+ // cout<<ans;
+  for (int i=0; i<arr.size(); i++ ){
+    cout<<arr[i]<<" ";
+  }
+  vector <int> brr(10);
+  cout<<brr.size()
+<<endl;
+
+                                                                                  // FIND THE UNIQUE NUMBER IN ARRAY
+  int n;
+  cin>>n;
+  vector <int> arr(n);
+  for (int i=0; i<arr.size(); i++){
+    cin>>arr[i];
+  }
+  uniquelement(arr);
+  cout<<uniquelement(arr)<<endl;
+
+
+ // cout<<ans<<endl;
+
+  return 0;
+}
+
+*/
+
+                                                                         // FINDING UNIQUE NUMBER WITHOUT USING FUNCTION
+
+#include <iostream>
+#include <limits.h>
+#include <vector>
+using namespace std;
+/*
+int main () {
+  int n;
+  cin>>n;
+  vector <int> arr(n);
+  for (int i=0; i<arr.size(); i++) {
+    cin>>arr[i];
+  }
+  int ans = 0;
+  for (int i=0; i<arr.size(); i++){
+    ans = ans ^ arr[i];
+  }
+  cout<<ans;
+  return 0;
+}*/
+
+                                                                                    // UNION OF ARRAYS with duplicates
+
+/*
+int main () {
+  int n;
+  cout<<"no. of element in first array "<<endl;
+  cin>>n;
+  vector <int> arr(n);
+  for (int i=0; i<arr.size(); i++){
+    cin>>arr[i];
+  }
+  int m;
+  cout<<"no. of element in second array "<<endl;
+  cin>>m;
+  vector <int> brr(n);
+  for (int i=0; i<brr.size();i++){
+    cin>>brr[i];
+  }
+  vector <int> crr;
+  // pusing back all the elements
+  for (int i=0; i<arr.size(); i++){
+    crr.push_back(arr[i]);
+  }
+  for (int i=0; i<brr.size() ; i++){
+    crr.push_back(brr[i]);
+  }
+  //printing all the elements
+  cout<<"union of arr and brr is : ";
+  for (int i=0; i<crr.size(); i++) {
+    cout<<crr[i]<<" ";
+  }
+  return 0;
+}
+*/
+
+                                                                                            // INTERSECTION
+/*
+int main () {
+  int n;
+  cout<<"no. of elements for arr : "<<endl;
+  cin>>n;
+  vector <int > arr(n);
+  for (int i=0; i<arr.size(); i++) {
+    cin>>arr[i];
+  }
+  int m;
+  cout<<" no. of elements for brr : "<<endl;
+  cin>>m;
+  vector <int> brr(m) ;
+  for (int i=0; i<brr.size(); i++){
+    cin>>brr[i];
+  }
+  vector <int> crr;
+  for (int i=0; i<arr.size() ; i++){
+   int ele = arr[i];
+    for (int j=0; j<brr.size(); j++) {
+      if (ele == brr[j]){
+        // marking the aaray
+        brr[j]=-1;
+        crr.push_back(ele);
+      }
+    }
+  }
+  //printing the aaray
+ // for (auto value : crr){
+ //   cout<<value <<" ";
+ // }
+
+  for (int i=0; i<crr.size(); i++) {
+    cout<<crr[i]<<" ";
+  }
+  */
+
+                                                                                  // PRINTING THE PAIR SUM
+
+/*
+int main () {
+  int n;
+  cin>>n;
+  vector <int> arr(n) ;
+  int sum = 80;
+  for (int i=0 ; i<arr.size() ; i++) {
+    cin>>arr[i];
+  }
+  for (int i =0 ; i<arr.size(); i++) {
+    int element = arr[i];
+    for (int j=i+1 ; j< arr.size(); j++){
+      if (element + arr[j] == sum) {
+        cout<<" pair found "<< element <<" and "<<arr[j]<<endl;
+      }
+    }
+  }
+
+}
+
+*/
+
+                                                                                 // PRINTING THE PAIRS
+
+/*
+int main () {
+  int n;
+  cin>>n;
+  vector <int> arr(n) ;
+  int sum = 80;
+  for (int i=0 ; i<arr.size() ; i++) {
+    cin>>arr[i];
+  }
+  for (int i =0 ; i<arr.size(); i++) {
+    int element = arr[i];
+    for (int j=i+1 ; j< arr.size(); j++){
+     cout << element <<" "<<arr[j] <<endl;
+    }
+  }
+  return 0;
+}
+*/
+
+                                                                                    // PRINTING SUM OF TRIPLETS
+
+/*
+int main  () {
+ int n;
+  cin>>n;
+  vector <int> arr(n);
+  int sum = 40;
+  for (int i=0; i<arr.size(); i++){
+    cin>>arr[i];
+  }
+  for (int i= 0; i<arr.size(); i++ ){
+    int element1 = arr[i];
+    for (int j=i+1; j<arr.size(); j++){
+      int element2 = arr[j];
+      for (int k= j+1; k<arr.size() ;k++){
+         if (element1 + element2 + arr[k] == sum ) {
+           cout << " triplet found "<< element1 <<" "<< element2 <<" "<< arr[k]
+<<endl;
+         }
+      }
+    }
+  }
+  return 0;
+}
+*/
+
+                                                                                  // SORTING ZEROS AND ONES
+
+int main() {
+  vector<int> arr{0, 1, 1, 1, 0, 1, 0, 1, 0};
+  int start = 0;
+  int end = arr.size() - 1;
+  int i = 0;
+  while (i != end) {
+    if (arr[i] == 0) {
+      swap(arr[start], arr[i]);
+      start++;
+      i++;
+    }
+    if (arr[i] == 1) {
+      swap(arr[end], arr[i]);
+      end--;
+    }
+  }
+  for (int i = 0; i < arr.size(); i++) {
+    cout << arr[i] << " ";
+  }
+  return 0;
+}
