@@ -1,0 +1,51 @@
+                                                                     // ITERATORS
+// they are pointer like structures
+// they point elements of container
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  
+  vector<int> v={2,3,4,5,6};
+  for (int i=0; i<v.size(); i++){
+    cout<<v[i]<<" ";
+  }
+  cout<<endl;
+  //declration of iterator
+  vector<int> :: iterator it=v.begin();
+  cout<<(*(it+1))<<endl;
+  for (it=v.begin(); it!=v.end(); ++it) {
+    cout<<(*it)<<endl;
+  }
+  
+  vector<pair<int,int>> pr = {{1,2},{2,3},{3,4}};
+  vector<pair<int,int>> :: iterator it1;
+  for (it1 = pr.begin(); it1 != pr.end(); it1++){
+    cout<<(*it1).first<<" "<<(*it1).second<<" "<<endl;
+  }
+
+    // (*it) is equivent to (it->first)
+
+
+
+                                                                         //RANGED BASED LOOP
+
+  //we can directly iterate on the elements of loop
+
+    for (pair<int,int> &value : pr) {
+      cout<<value.first<<" "<<value.second<<" "<<endl;
+    }
+    
+  for (int value: v){
+    cout<<value<<" ";
+  }
+    cout<<endl;
+
+    
+//AUTO
+
+  //determines the data types automatically
+
+  
+  
+}
