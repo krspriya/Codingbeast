@@ -1,0 +1,65 @@
+                                                                          // NESTING IN VECTOR
+
+#include <bits/stdc++.h>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main() {
+
+  int n;
+  cin>>n;
+  
+                                                                             // VECTOR AS ARRAY
+  /*
+  int n;
+  cin>>n;
+  vector <int> v(n);
+  for (int i=0; i<n ; i++){
+    cin>>v[i];
+  }
+  cout<<" hello"<<endl;
+  for  (int i=0; i<n ; i++) {
+    cout<<v[i];
+  }
+  */
+
+                                                                              //VECTOR OF PAIR 
+
+/*
+  vector<pair<int,int>> pr;
+
+  for(int i=0; i<n; i++) {
+    int x, y;
+    cin>>x>>y;
+    pr.push_back({x,y});
+  }
+  cout<<" printing the vector of pairs :"<<endl;
+  for(int i=0; i<n; i++) {
+     cout<<pr[i].first<<" "<<pr[i].second<<endl; 
+  }
+*/
+
+                                                                            // VECTOR OF VECTOR 
+
+  vector <vector <int>> v;
+  for (int i=0; i<n; i++) {
+    int n;
+    cin>>n;
+    vector <int> temp;
+    for (int j=0; j<n; j++) {
+      int x;
+      cin>>x;
+      temp.push_back(x);
+    }
+    v.push_back(temp);
+  }
+
+  for (int i=0; i<v.size(); i++) {
+      for (int j=0; j<v[i].size(); j++) {
+         cout << v[i][j] << " ";
+      }
+    cout<<endl;
+  }
+  
+}
