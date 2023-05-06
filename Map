@@ -1,0 +1,109 @@
+                                                                                   //MAPS
+                                                                                   
+// map is not of continous nature
+// key to value mapping
+// every element in map is  a pair which stores key and value
+// map dont have continous elements 
+// iterators are done as it++ not it+1
+// it can have any data types for key as well as for values
+// stores values in sorted order
+// maps have unique keys, cant insert duplicate keys
+// if frequency and unquie element id asked in question than use map
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+/*
+  // decelration of map
+
+  map<int, string> m;
+
+  //putting values in map
+
+  m[1] = "abc";  // 0 (log(n))
+  m[3] = "def";
+  m[5] = "ghi";
+
+  m.insert({4, "bcd" });
+  */
+/*
+  map<int, string> :: iterator it;
+  //printing map with iterator
+
+  for (it=m.begin(); it!= m.end(); it++) {
+    cout<<(*it).first<<" "<<(*it).second<<" "<<endl;
+  }
+
+  //printing map directly
+
+  for (auto &pr : m) {
+    cout<<pr.first<<" "<<pr.second<<endl;
+  } */
+
+  // finding in map
+
+  /*
+  auto it = m.find(3); // 0 (log(n))
+  if (it==m.end()) {
+    cout<<" no value";
+  }
+  else {
+    cout<<(*it).first<<" "<<(*it).second<<" "<<endl;
+  }
+
+  m.erase(3); //0 log(n)  it can take input both as key and iterator
+  */
+
+
+  // ques :  given N strings, print unique strings in lexiographical order with their frequency , N <= 10^5; |S| <= 100
+
+  /*
+  map<string, int> m;
+  int n;
+  string s;
+  cin>>n;
+  for (int i =0; i<n ; i++) {
+    cin>>s;
+    m[s]++;
+  }
+  for (auto pr : m) {
+    cout<<pr.first<<" "<<pr.second<<" "<<endl;
+  }
+    */
+
+                                                                           // UNORDERED MAP
+
+  //  it is used when ordered outcome is not required.
+  // it saves time as its time complexcity is log(1) ;
+  // cant put complex data types in case of unordered map
+
+
+  
+  // ques: given N strings and Q queries. in each query you are given a string. print string frequency for that string; N<=10^6; |S|<=100; Q<= 10^6; 
+
+      unordered_map<string, int> m;
+      int n;
+      string s;
+      cin>>n;
+      for (int i=0; i<n; i++) {  // these are input of N strings
+        cin>>s;
+        m[s]++;
+      }
+      int q;                // these are queries
+      cin>>q;
+      while (q--){
+      string s;
+        cin>>s;
+        cout<<m[s]<<endl;
+  }
+
+
+  // difference between map and multi map
+
+  // in multimap we can insert same values twicw which is not possible for maps
+  
+
+
+
+  
+}
