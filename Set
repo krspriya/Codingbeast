@@ -1,0 +1,100 @@
+                                                                                  // SETS
+// stores unique elements
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  /*
+  set<int> s;
+  s.insert(3);   // log(n)
+  s.insert(4);
+  auto it = s.find(3);
+  if (it!=s.end()) {
+    cout<<(*it)<<endl;
+  }
+  s.erase(4); // it can take 2 values either value or the iterator
+  */
+
+  // ques :  given N strings, print unique strings in lexiographical order  ;
+  // N<= 10^5; |s| <= 100000;
+
+  /*
+   set<string> s;
+  int n;
+  cin>>n;
+  for (int i=0; i<n; i++) {
+    string st;
+    cin>>st;
+    s.insert(st);
+  }
+   for (auto pr : s) {
+     cout<<pr<<endl;
+   }
+  */
+
+                                                                                        //  UNORDERED SET
+
+  // use when order doesnt matter
+
+  // cant use complex data structure
+
+  //
+  /*
+   unordered_set<int> s;
+  s.insert(3);   // o(1)
+  s.insert(4);
+  auto it = s.find(3);   // o(1)
+  if (it!=s.end()) {      // s.end means value is not present
+    cout<<(*it)<<endl;
+  }
+  */
+
+  // ques : given N strings and Q queries. in each query you are given a stringprint yes if string is present else print no.  N <= 10^6 ; |S| <= 100; Q <=
+  // 10^6
+
+  /*
+    unordered_set<string> s;
+    int n;
+    cin>>n;
+    for (int i=0; i<n; i++) {
+      string str;
+      cin>>str;
+      s.insert(str);
+    }
+    int q;
+    cin>>q;
+    while (q--){
+      string str;
+      cin>>str;
+      if(s.find(str)==s.end()){
+        cout<<"no\n";
+      }
+      else {
+        cout<<"yes\n";
+      }
+    }
+
+    */
+
+                                                                                   // MULTISETS
+
+  // allows to insert multiple values in set
+
+  // internally uses RED BLACK TREE
+
+  //  if duplicate is present than it returns the iterator value of first
+  //  element
+
+  // if we pass value in s.erase than the whole value is deleted weather it is
+  // duplicate or not
+
+  //
+
+  multiset<int> s;
+  s.insert(3); // o(log(n))
+  s.insert(4);
+  auto it = s.find(3); // o(log(n))
+  if (it != s.end()) {
+    cout << (*it) << endl;
+  }
+}
